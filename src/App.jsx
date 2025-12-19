@@ -9,7 +9,7 @@ return (
         style={{
           width: "100vw",
           height: "100vh",
-          paddingTop: "60px", // header height
+          paddingTop: "60px",
         }}
       >
         <DrawingBoard />
