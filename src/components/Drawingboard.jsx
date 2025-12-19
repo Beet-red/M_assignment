@@ -10,7 +10,7 @@ import {
 const MAX_DOTS = 4;
 const MIN_DISTANCE = 20;
 
-// ---------- Geometry Helpers ----------
+
 const distance = (a, b) =>
   Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
 
@@ -42,7 +42,6 @@ const isValidSquare = (points) => {
   return sidesEqual && diagonalsValid;
 };
 
-// ---------- Color Helper ----------
 const generateRandomColor = () => {
   const colors = [
     "#1abc9c",
@@ -57,7 +56,7 @@ const generateRandomColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-// ---------- Component ----------
+
 const DrawingBoard = () => {
   const [currentDots, setCurrentDots] = useState([]);
   const [squares, setSquares] = useState([]);
@@ -84,7 +83,7 @@ const DrawingBoard = () => {
     setCurrentDots(updatedDots);
     setWarning("");
 
-    // Finalize square
+    
     if (updatedDots.length === MAX_DOTS) {
       setSquares((prev) => [
         ...prev,
@@ -95,7 +94,7 @@ const DrawingBoard = () => {
         },
       ]);
 
-      // Prepare next square
+  
       setTimeout(() => {
         setCurrentDots([]);
         setCurrentColor(generateRandomColor());
@@ -115,7 +114,6 @@ const DrawingBoard = () => {
   return (
     <div style={containerStyle}>
       <svg style={svgStyle} onClick={handleClick}>
-        {/* Completed squares */}
         {squares.map((square, sIndex) =>
           square.dots.map((dot, index) => {
             const nextDot =
@@ -134,7 +132,7 @@ const DrawingBoard = () => {
           })
         )}
 
-        {/* Current square in progress */}
+        
         {currentDots.map((dot, index) => {
           if (index === 0) return null;
           const prev = currentDots[index - 1];
@@ -165,7 +163,7 @@ const DrawingBoard = () => {
         )}
       </svg>
 
-      {/* Reserved message space to prevent layout shift */}
+
     <div style={messageContainerStyle}>
         {lastSquare && (
         lastSquare.isSquare ? (
