@@ -26,7 +26,7 @@ Follow the steps below to run the project locally:
 
 Open the application
 The app will be available at the URL shown in the terminal
-
+https://beet-red.github.io/M_assignment/ or could follow this link
 
 
 Here’s a short, interview-oriented version, crisp and professional, while still clearly explaining your thinking as a fresher.
