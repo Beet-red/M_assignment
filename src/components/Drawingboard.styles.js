@@ -35,7 +35,7 @@ export const messageContainerStyle = {
   minHeight: "120px",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",     // horizontal centering
-  justifyContent: "center", // vertical centering
+  alignItems: "center",     
+  justifyContent: "center", 
   textAlign: "center",
 };
